@@ -69,13 +69,13 @@
 " }
 
 " Vim UI {
-	color solarized   	       		" load a colorscheme
+	"color solarized   	       		" load a colorscheme
 	set tabpagemax=15 				" only show 15 tabs
 	set showmode                   	" display the current mode
 
-	set cursorline  				" highlight current line
-	hi cursorline guibg=#333333 	" highlight bg color of current line
-	hi CursorColumn guibg=#333333   " highlight cursor
+	"set cursorline  				" highlight current line
+	"hi cursorline guibg=#333333 	" highlight bg color of current line
+	"hi CursorColumn guibg=#333333   " highlight cursor
 
 	if has('cmdline_info')
 		set ruler                  	" show the ruler
@@ -90,7 +90,7 @@
 		" Broken down into easily includeable segments
 		set statusline=%<%f\    " Filename
 		set statusline+=%w%h%m%r " Options
-		set statusline+=%{fugitive#statusline()} "  Git Hotness
+        "		set statusline+=%{fugitive#statusline()} "  Git Hotness
 		set statusline+=\ [%{&ff}/%Y]            " filetype
 		set statusline+=\ [%{getcwd()}]          " current dir
 		"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
@@ -112,6 +112,7 @@
 	set scrolljump=5 				" lines to scroll when cursor leaves screen
 	set scrolloff=3 				" minimum lines to keep above and below cursor
 	set foldenable  				" auto fold code
+    set foldlevel=100
 	set gdefault					" the /g flag on :s substitutions by default
     set list
     set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
@@ -169,7 +170,7 @@
 	" Yank from the cursor to the end of the line, to be consistent with C and D.
 	nnoremap Y y$
 		
-	""" Code folding options
+	" Code folding options
 	nmap <leader>f0 :set foldlevel=0<CR>
 	nmap <leader>f1 :set foldlevel=1<CR>
 	nmap <leader>f2 :set foldlevel=2<CR>
